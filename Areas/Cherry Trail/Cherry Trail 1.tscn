@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Assets/General/Tiles/Grass Tile.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/SimpleCamera2D.gd" type="Script" id=2]
@@ -37,7 +37,6 @@
 [ext_resource path="res://Assets/General/Shadows/circle shadow small modulatable.png" type="Texture" id=35]
 [ext_resource path="res://UI/Battle/Battle Dialogue.png" type="Texture" id=36]
 [ext_resource path="res://Misc/Font/Dialogue.tres" type="DynamicFont" id=37]
-[ext_resource path="res://Assets/Present Box/PresentBase.tscn" type="PackedScene" id=38]
 
 [sub_resource type="TileSet" id=1]
 7/name = "Grass Tile.png 7"
@@ -555,6 +554,3 @@ margin_right = 96.1111
 margin_bottom = 4.53217
 custom_fonts/font = ExtResource( 37 )
 text = "Pretty Gem!"
-
-[node name="PresentBase" parent="Camera2D/Info_Window" instance=ExtResource( 38 )]
-position = Vector2( 351.111, -31.1111 )

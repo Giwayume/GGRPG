@@ -80,6 +80,8 @@ func _physics_process(_delta):
 #----------------#
 
 func update_mesh():
+	if not depth_test_mesh:
+		return
 	var mesh = depth_test_mesh.get_ref()
 	if mesh:
 		mesh.material_override.set_shader_param("alpha_clip", alpha_clip)
@@ -107,7 +109,7 @@ func _generate_meshes():
 	
 	if not visible:
 		return
-	
+		
 	var texture_size = texture.get_size() / Vector2(hframes, vframes)
 	var top_left = (-Vector2(texture_size.x / 2, texture_size.y / 2) if centered else Vector2.ZERO)
 	var top_right = top_left + Vector2(texture_size.x, 0.0)
